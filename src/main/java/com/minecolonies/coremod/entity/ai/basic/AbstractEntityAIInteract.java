@@ -2,10 +2,7 @@ package com.minecolonies.coremod.entity.ai.basic;
 
 import com.minecolonies.api.entity.ai.citizen.builder.IBuilderUndestroyable;
 import com.minecolonies.api.entity.pathfinding.PathResult;
-import com.minecolonies.api.util.BlockPosUtil;
-import com.minecolonies.api.util.InventoryUtils;
-import com.minecolonies.api.util.ItemStackUtils;
-import com.minecolonies.api.util.MathUtils;
+import com.minecolonies.api.util.*;
 import com.minecolonies.coremod.MineColonies;
 import com.minecolonies.coremod.colony.buildings.AbstractBuilding;
 import com.minecolonies.coremod.colony.jobs.AbstractJob;
@@ -161,7 +158,8 @@ public abstract class AbstractEntityAIInteract<J extends AbstractJob<?, J>, B ex
         @Nullable final Block curBlock = curBlockState.getBlock();
         if (curBlock instanceof AirBlock
               || curBlock instanceof IBuilderUndestroyable
-              || curBlock == Blocks.BEDROCK)
+//              || curBlock == Blocks.BEDROCK
+        )
         {
             if (curBlockState.getMaterial().isLiquid())
             {

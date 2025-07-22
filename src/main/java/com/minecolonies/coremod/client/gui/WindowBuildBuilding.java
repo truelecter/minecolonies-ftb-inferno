@@ -74,7 +74,7 @@ public class WindowBuildBuilding extends AbstractWindowSkeleton
         final BlockState worldState = handler.getWorld().getBlockState(worldPos);
 
         return worldState.getBlock() instanceof IBuilderUndestroyable
-                 || worldState.getBlock() == Blocks.BEDROCK
+//                 || worldState.getBlock() == Blocks.BEDROCK
                  || (info.getBlockInfo().getState().getBlock() instanceof AbstractBlockHut && handler.getWorldPos().equals(worldPos));
     };
 

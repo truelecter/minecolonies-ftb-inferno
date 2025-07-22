@@ -103,7 +103,7 @@ public abstract class AbstractEntityAIStructure<J extends AbstractJobStructure<?
         final BlockState worldState = handler.getWorld().getBlockState(worldPos);
 
         return worldState.getBlock() instanceof IBuilderUndestroyable
-                 || worldState.getBlock() == Blocks.BEDROCK
+//                 || worldState.getBlock() == Blocks.BEDROCK
                  || (info.getBlockInfo().getState().getBlock() instanceof AbstractBlockHut && handler.getWorldPos().equals(worldPos)
                        && worldState.getBlock() instanceof AbstractBlockHut);
     };
@@ -439,7 +439,7 @@ public abstract class AbstractEntityAIStructure<J extends AbstractJobStructure<?
 
                 result = placer.executeStructureStep(world, null, progress, StructurePlacer.Operation.BLOCK_REMOVAL,
                   () -> placer.getIterator().decrement((info, pos, handler) -> handler.getWorld().getBlockState(pos).getBlock() instanceof IBuilderUndestroyable
-                                                                                 || handler.getWorld().getBlockState(pos).getBlock() == Blocks.BEDROCK
+//                                                                                 || handler.getWorld().getBlockState(pos).getBlock() == Blocks.BEDROCK
                                                                                  || handler.getWorld().getBlockState(pos).getBlock() instanceof AirBlock
                                                                                  || info.getBlockInfo().getState().getBlock()
                                                                                       == com.ldtteam.structurize.blocks.ModBlocks.blockFluidSubstitution.get()
